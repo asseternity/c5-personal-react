@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import './index.css';
-import { TestComponent } from './components/test';
-import { Login } from './components/login';
+import { routes } from './routes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Login />
+    <RouterProvider router={routes} />
   </React.StrictMode>
 );
