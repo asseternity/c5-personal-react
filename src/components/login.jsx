@@ -13,13 +13,22 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    try {
+    } catch (err) {
+      console.error('Error during login: ', err);
+    }
+  };
+
   return (
     <div className="login_main">
       <div className="login_header">
         <h2>Login</h2>
       </div>
       <div className="login_content">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Username:</label>
           <input
             type="text"
