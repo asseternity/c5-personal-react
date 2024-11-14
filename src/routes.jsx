@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Login } from './components/login';
 import { TestComponent, TestChildComponent } from './components/test';
 import { Newsletter } from './components/newsletter';
+import { Index } from './components';
 
 const routes = createBrowserRouter([
   {

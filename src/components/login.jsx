@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [currentUser, setCurrentUser] = useState({
+    user: { username: 'nobody' },
+  });
 
   const onUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -13,10 +16,25 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
+      const response = await fetch(
+        'https://c5-personal-production.up.railway.app/api/log-in',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include',
+          body: JSON.stringify({ username, password }),
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        setCurrentUser(data);
+      }
     } catch (err) {
       console.error('Error during login: ', err);
     }
@@ -50,6 +68,7 @@ const Login = () => {
         <Link to="/test/">
           <p>Test page</p>
         </Link>
+        <p>Currently logged in as: {currentUser.user.username}</p>
       </div>
     </div>
   );
