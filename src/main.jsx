@@ -6,6 +6,8 @@ import { routes } from './routes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={routes} />
+    <HashRouter>
+      <RouterProvider router={routes} />
+    </HashRouter>
   </React.StrictMode>
 );
