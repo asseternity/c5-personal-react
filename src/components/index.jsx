@@ -21,6 +21,7 @@ const Index = () => {
     e.preventDefault();
     try {
       const response = await fetch(
+        // 'http://localhost:3000/api/log-in',
         'https://c5-personal-production.up.railway.app/api/log-in',
         {
           method: 'POST',
