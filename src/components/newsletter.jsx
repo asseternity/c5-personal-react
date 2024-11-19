@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Newsletter = ({ user }) => {
   const fetchMessages = async () => {
+    console.log('user in React = ');
+    console.log(user);
     try {
       const response = await fetch(
         'https://c5-personal-production.up.railway.app/api/allMessages',
