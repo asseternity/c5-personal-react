@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import { routes } from './routes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HashRouter>
-      <RouterProvider router={routes} />
+      <Routes>{routes}</Routes>
     </HashRouter>
   </React.StrictMode>
 );
