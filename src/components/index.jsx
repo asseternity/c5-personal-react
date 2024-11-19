@@ -21,7 +21,6 @@ const Index = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        // 'http://localhost:3000/api/log-in',
         'https://c5-personal-production.up.railway.app/api/log-in',
         {
           method: 'POST',
@@ -34,7 +33,6 @@ const Index = () => {
       );
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         setUser(data);
       }
     } catch (err) {

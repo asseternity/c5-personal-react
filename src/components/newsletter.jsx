@@ -5,7 +5,6 @@ const Newsletter = ({ user }) => {
   const fetchMessages = async () => {
     try {
       const response = await fetch(
-        // 'http://localhost:3000/api/allMessages',
         'https://c5-personal-production.up.railway.app/api/allMessages',
         {
           method: 'POST',
@@ -13,11 +12,11 @@ const Newsletter = ({ user }) => {
             'Content-Type': 'application/json',
           },
           credentials: 'include',
+          body: JSON.stringify(user),
         }
       );
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
       }
     } catch (err) {
       console.error('Error during fetching your messages: ', err);
