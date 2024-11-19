@@ -17,6 +17,7 @@ const Newsletter = ({ user }) => {
       );
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
       }
     } catch (err) {
       console.error('Error during fetching your messages: ', err);
