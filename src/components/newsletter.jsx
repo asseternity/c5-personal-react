@@ -14,7 +14,7 @@ const Newsletter = ({ user }) => {
             'Content-Type': 'application/json',
           },
           credentials: 'include',
-          body: JSON.stringify(user),
+          body: JSON.stringify({ user }),
         }
       );
       if (response.ok) {
