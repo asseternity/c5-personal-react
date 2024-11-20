@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Vinque';
-  src: url('./vinque rg.otf') format('truetype');
+  src: url('/vinque rg.otf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Scriptin';
-  src: url('./SCRIPTIN.ttf') format('truetype');
+  src: url('/SCRIPTIN.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
