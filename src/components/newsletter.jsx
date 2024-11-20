@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NewspaperGrid, NewspaperStory } from '../styled/newspaper_elements';
+import CenteredWrapper from '../styled/centered_wrapper';
 
 const Newsletter = ({ user }) => {
   const [messages, setMessages] = useState([]);
@@ -33,7 +34,9 @@ const Newsletter = ({ user }) => {
 
   return (
     <div>
-      <h1>Newsletter for {user.username}</h1>
+      <CenteredWrapper>
+        <h1>Newsletter for {user.username}</h1>
+      </CenteredWrapper>
       <NewspaperGrid>
         {messages.map((message) => (
           <NewspaperStory key={message.id}>

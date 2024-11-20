@@ -9,6 +9,7 @@ const NewspaperGrid = styled.div`
   gap: 16px; /* Space between blocks */
   padding: 16px;
   background-color: #f5f5dc; /* Newspaper-like off-white background */
+  border: 1px solid black;
 `;
 
 const NewspaperStory = styled.div`
