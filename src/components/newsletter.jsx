@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { NewspaperGrid, NewspaperStory } from '../styled/newspaper_elements';
 
 const Newsletter = ({ user }) => {
   const [messages, setMessages] = useState([]);
@@ -33,15 +34,15 @@ const Newsletter = ({ user }) => {
   return (
     <div>
       <h1>Newsletter for {user.username}</h1>
-      <ul>
+      <NewspaperGrid>
         {messages.map((message) => (
-          <li key={message.id}>
+          <NewspaperStory key={message.id}>
             <h2>{message.name}</h2>
             <p>{message.text}</p>
             <small>{new Date(message.createdAt).toLocaleString()}</small>
-          </li>
+          </NewspaperStory>
         ))}
-      </ul>
+      </NewspaperGrid>
     </div>
   );
 };
