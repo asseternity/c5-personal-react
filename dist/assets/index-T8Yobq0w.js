@@ -140,7 +140,7 @@ Error generating stack: `+o.message+`
     font-size: 12px;
     color: #555; /* Subtle color for timestamps */
   }
-`,Id=({user:e})=>{const[t,n]=R.useState([]);return R.useEffect(()=>{(async()=>{try{const l=await fetch("https://c5-personal-production.up.railway.app/api/allMessages",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify({user:e})});if(l.ok){const o=await l.json();n(o)}}catch(l){console.error("Error during fetching your messages: ",l)}})()},[e]),O.jsxs(ir,{children:[O.jsxs("h1",{children:["Newsletter for ",e.username]}),O.jsx(nv,{children:t.map(r=>O.jsxs(rv,{children:[O.jsx("h2",{children:r.name}),O.jsx("p",{children:r.text}),O.jsx("small",{children:new Date(r.createdAt).toLocaleString()})]},r.id))})]})},lv=Vn.div`
+`,Id=({user:e})=>{const[t,n]=R.useState([]);return R.useEffect(()=>{(async()=>{try{const l=await fetch("https://c5-personal-production.up.railway.app/api/allMessages",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify({user:e})});if(l.ok){const o=await l.json();n(o)}}catch(l){console.error("Error during fetching your messages: ",l)}})()},[e]),O.jsxs(ir,{children:[O.jsxs("h1",{children:["Newsletter for ",e.username]}),O.jsx(nv,{children:t.slice().reverse().map(r=>O.jsxs(rv,{children:[O.jsx("h2",{children:r.name}),O.jsx("p",{children:r.text}),O.jsx("small",{children:new Date(r.createdAt).toLocaleString()})]},r.id))})]})},lv=Vn.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;

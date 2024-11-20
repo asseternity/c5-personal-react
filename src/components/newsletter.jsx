@@ -36,13 +36,16 @@ const Newsletter = ({ user }) => {
     <DownRowWrapper>
       <h1>Newsletter for {user.username}</h1>
       <NewspaperGrid>
-        {messages.map((message) => (
-          <NewspaperStory key={message.id}>
-            <h2>{message.name}</h2>
-            <p>{message.text}</p>
-            <small>{new Date(message.createdAt).toLocaleString()}</small>
-          </NewspaperStory>
-        ))}
+        {messages
+          .slice() // Creates a copy of the array to avoid mutating the state directly
+          .reverse() // Reverses the array so latest messages appear first
+          .map((message) => (
+            <NewspaperStory key={message.id}>
+              <h2>{message.name}</h2>
+              <p>{message.text}</p>
+              <small>{new Date(message.createdAt).toLocaleString()}</small>
+            </NewspaperStory>
+          ))}
       </NewspaperGrid>
     </DownRowWrapper>
   );
