@@ -21,7 +21,6 @@ body {
   display: flex; /* Use flex to ensure centering */
   justify-content: center; /* Horizontally center content */
   align-items: center; /* Vertically center content */
-  height: 100vh; /* Full viewport height */
 }
 
 form {
