@@ -38,7 +38,7 @@ const Newsletter = ({ user }) => {
   return (
     <DownRowWrapper>
       <BackgroundImageWrapper image={bgImagePath}>
-        <h1>Newsletter for {user.username}</h1>
+        <h1>Viva Verso: {user.username}'s Edition</h1>
       </BackgroundImageWrapper>
       <NewspaperGrid>
         {messages

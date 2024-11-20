@@ -8,6 +8,9 @@ const BackgroundImageWrapper = styled.div`
   width: 100%; /* Makes it responsive to parent width */
   height: 100%; /* Ensures full height of the container */
   position: relative; /* Allows you to layer content over it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default BackgroundImageWrapper;
