@@ -148,9 +148,7 @@ Error generating stack: `+o.message+`
   width: 100%; /* Makes it responsive to parent width */
   height: 100%; /* Ensures full height of the container */
   position: relative; /* Allows you to layer content over it */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 `,Od=({user:e})=>{const[t,n]=R.useState([]);return R.useEffect(()=>{(async()=>{try{const o=await fetch("https://c5-personal-production.up.railway.app/api/allMessages",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify({user:e})});if(o.ok){const i=await o.json();n(i)}}catch(o){console.error("Error during fetching your messages: ",o)}})()},[e]),$.jsxs(ir,{children:[$.jsx(lv,{image:"newspaperimage.jpg",children:$.jsxs("h1",{children:["Viva Verso: ",e.username,"'s Edition"]})}),$.jsx(nv,{children:t.slice().reverse().map(l=>$.jsxs(rv,{children:[$.jsx("h2",{children:l.name}),$.jsx("p",{children:l.text}),$.jsx("small",{children:new Date(l.createdAt).toLocaleString()})]},l.id))})]})},ov=ln.div`
   display: flex;
   justify-content: space-evenly;
