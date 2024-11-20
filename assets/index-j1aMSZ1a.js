@@ -144,7 +144,6 @@ Error generating stack: `+o.message+`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
   width: 100vw;
   color: ${e=>e.textColor||"black"};
 `,ov=()=>{const[e,t]=R.useState(null),[n,r]=R.useState(""),[l,o]=R.useState(""),i=a=>{r(a.target.value)},u=a=>{o(a.target.value)},s=async a=>{a.preventDefault();try{const h=await fetch("https://c5-personal-production.up.railway.app/api/log-in",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify({username:n,password:l})});if(h.ok){const p=await h.json();t(p)}}catch(h){console.error("Error during login: ",h)}};return $.jsx(lv,{children:$.jsxs("div",{children:[!e&&$.jsx(Od,{handleFormSubmit:s,username:n,onUsernameChange:i,password:l,onPasswordChange:u}),e&&$.jsx(Id,{user:e})]})})},iv=[$.jsx(lr,{path:"/",element:$.jsx(ov,{})},"/"),$.jsx(lr,{path:"/test",element:$.jsx(ev,{})},"/test"),$.jsx(lr,{path:"/main",element:$.jsx(Id,{})},"/main"),$.jsx(lr,{path:"/login",element:$.jsx(Od,{})},"/login")];oi.createRoot(document.getElementById("root")).render($.jsx(Zt.StrictMode,{children:$.jsx(Zm,{children:$.jsx(Ym,{children:iv})})}));
