@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import DownRowWrapper from '../styled/down_row_wrapper';
+import StyledButton from '../styled/styled_button';
 
 const Login = ({
   handleFormSubmit,
@@ -9,11 +11,11 @@ const Login = ({
   onPasswordChange,
 }) => {
   return (
-    <div className="login_main">
-      <div className="login_header">
-        <h2>Login</h2>
-      </div>
-      <div className="login_content">
+    <DownRowWrapper>
+      <DownRowWrapper textColor="black">
+        <h2 className="custom_header">Identify yourself</h2>
+      </DownRowWrapper>
+      <DownRowWrapper textColor="black">
         <form onSubmit={handleFormSubmit}>
           <label>Username:</label>
           <input
@@ -29,15 +31,12 @@ const Login = ({
             onChange={onPasswordChange}
             required
           />
-          <button type="submit">Login</button>
+          <DownRowWrapper>
+            <StyledButton type="submit">Login</StyledButton>
+          </DownRowWrapper>
         </form>
-      </div>
-      <div className="login_extras">
-        <Link to="/test/">
-          <p>Test page</p>
-        </Link>
-      </div>
-    </div>
+      </DownRowWrapper>
+    </DownRowWrapper>
   );
 };
 

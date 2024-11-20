@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { Login } from './login';
 import { Newsletter } from './newsletter';
+import CenteredWrapper from '../styled/centered_wrapper';
 
 const Index = () => {
   const [user, setUser] = useState(null);
@@ -41,18 +41,20 @@ const Index = () => {
   };
 
   return (
-    <div>
-      {!user && (
-        <Login
-          handleFormSubmit={handleSubmit}
-          username={username}
-          onUsernameChange={onUsernameChange}
-          password={password}
-          onPasswordChange={onPasswordChange}
-        />
-      )}
-      {user && <Newsletter user={user} />}
-    </div>
+    <CenteredWrapper>
+      <div>
+        {!user && (
+          <Login
+            handleFormSubmit={handleSubmit}
+            username={username}
+            onUsernameChange={onUsernameChange}
+            password={password}
+            onPasswordChange={onPasswordChange}
+          />
+        )}
+        {user && <Newsletter user={user} />}
+      </div>
+    </CenteredWrapper>
   );
 };
 

@@ -1,13 +1,97 @@
-html,
-body {
-  color: red;
+@font-face {
+  font-family: 'Vinque';
+  src: url('./vinque rg.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
-.login_main {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: 'Scriptin';
+  src: url('./SCRIPTIN.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  background-color: #e7dab7;
+  font-family: 'Vinque';
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  display: flex; /* Use flex to ensure centering */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100vh; /* Full viewport height */
+}
+
+form {
+  display: block;
+  max-width: 200px; /* Cap the form's width to prevent it from exceeding parent container */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  background: #f4e1b2; /* Light parchment-like background */
+  border: 2px solid #3d2a1f; /* Dark brown border for an antique feel */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3d2a1f; /* Dark brown for labels */
+  text-transform: uppercase; /* All caps for a formal, medieval touch */
+}
+
+form input,
+form button {
+  display: block;
+  width: 80%;
+  padding: 12px;
+  font-size: 18px; /* Increase font size for readability */
+  margin-bottom: 15px; /* Space out form elements */
+  border: 2px solid #3d2a1f; /* Dark border for inputs and buttons */
+  border-radius: 6px; /* Slightly rounded edges */
+  background-color: #fff; /* White background for form elements */
+  color: #3d2a1f; /* Dark brown text */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+form input {
+  font-family: 'Scriptin';
+}
+
+form input:focus,
+form button:focus {
+  outline: none; /* Remove focus outline for a cleaner look */
+  border-color: #6a11cb; /* Change border color on focus */
+}
+
+form input:hover,
+form button:hover {
+  background-color: #f0e6c8; /* Lighter background on hover */
+  transform: translateY(-2px); /* Slight hover effect */
+}
+
+form button {
+  background-color: #6a11cb; /* Purple background for the button */
+  color: white; /* White text on button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+form button:hover {
+  background-color: #2575fc; /* Lighter blue-purple on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+form button:active {
+  transform: translateY(1px); /* Button click effect */
+  background-color: #3d2a1f; /* Darker background when clicked */
+}
+
+.custom_header {
+  font-size: 200%;
 }
