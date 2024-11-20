@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NewspaperGrid, NewspaperStory } from '../styled/newspaper_elements';
-import CenteredWrapper from '../styled/centered_wrapper';
+import DownRowWrapper from '../styled/down_row_wrapper';
 
 const Newsletter = ({ user }) => {
   const [messages, setMessages] = useState([]);
@@ -33,10 +33,8 @@ const Newsletter = ({ user }) => {
   }, [user]);
 
   return (
-    <div>
-      <CenteredWrapper>
-        <h1>Newsletter for {user.username}</h1>
-      </CenteredWrapper>
+    <DownRowWrapper>
+      <h1>Newsletter for {user.username}</h1>
       <NewspaperGrid>
         {messages.map((message) => (
           <NewspaperStory key={message.id}>
@@ -46,7 +44,7 @@ const Newsletter = ({ user }) => {
           </NewspaperStory>
         ))}
       </NewspaperGrid>
-    </div>
+    </DownRowWrapper>
   );
 };
 
