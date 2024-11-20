@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NewspaperGrid, NewspaperStory } from '../styled/newspaper_elements';
 import DownRowWrapper from '../styled/down_row_wrapper';
+import BackgroundImageWrapper from '../styled/background_image_wrapper';
 
 const Newsletter = ({ user }) => {
   const [messages, setMessages] = useState([]);
@@ -32,9 +33,13 @@ const Newsletter = ({ user }) => {
     fetchMessages();
   }, [user]);
 
+  const bgImagePath = 'newspaperimage.jpg';
+
   return (
     <DownRowWrapper>
-      <h1>Newsletter for {user.username}</h1>
+      <BackgroundImageWrapper image={bgImagePath}>
+        <h1>Newsletter for {user.username}</h1>
+      </BackgroundImageWrapper>
       <NewspaperGrid>
         {messages
           .slice() // Creates a copy of the array to avoid mutating the state directly
