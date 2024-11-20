@@ -41,18 +41,20 @@ const Index = () => {
   };
 
   return (
-    <CenteredWrapper>
-      {!user && (
-        <Login
-          handleFormSubmit={handleSubmit}
-          username={username}
-          onUsernameChange={onUsernameChange}
-          password={password}
-          onPasswordChange={onPasswordChange}
-        />
-      )}
+    <div>
+      <CenteredWrapper>
+        {!user && (
+          <Login
+            handleFormSubmit={handleSubmit}
+            username={username}
+            onUsernameChange={onUsernameChange}
+            password={password}
+            onPasswordChange={onPasswordChange}
+          />
+        )}
+      </CenteredWrapper>
       {user && <Newsletter user={user} />}
-    </CenteredWrapper>
+    </div>
   );
 };
 
