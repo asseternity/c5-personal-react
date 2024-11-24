@@ -1,8 +1,17 @@
-# React + Vite
+# Blog / Newsletter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application with a database, user authentication and an admin panel for content management. The app features two frontends: one for displaying blog content and another for admins to add and manage posts.
 
-Currently, two official plugins are available:
+## Frontend:
+React
+Styled Components
+Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Backend:
+Node.js
+Express.js
+PostgreSQL
+Prisma ORM
+Passport (for authentication)
+
+## Check it out here: https://asseternity.github.io/c5-personal-react/
