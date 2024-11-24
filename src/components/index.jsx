@@ -40,6 +40,28 @@ const Index = () => {
     }
   };
 
+  const handleGuest = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        'https://c5-personal-production.up.railway.app/api/guest',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include',
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setUser(data);
+      }
+    } catch (err) {
+      console.error('Error during loading: ', err);
+    }
+  };
+
   return (
     <div>
       {!user && (
@@ -50,6 +72,7 @@ const Index = () => {
             onUsernameChange={onUsernameChange}
             password={password}
             onPasswordChange={onPasswordChange}
+            onGuestButtonClick={handleGuest}
           />
         </CenteredWrapper>
       )}

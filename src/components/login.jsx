@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import DownRowWrapper from '../styled/down_row_wrapper';
 import StyledButton from '../styled/styled_button';
+import SmallerButton from '../styled/smaller_button';
 
 const Login = ({
   handleFormSubmit,
@@ -9,6 +10,7 @@ const Login = ({
   onUsernameChange,
   password,
   onPasswordChange,
+  onGuestButtonClick,
 }) => {
   return (
     <DownRowWrapper>
@@ -33,6 +35,9 @@ const Login = ({
           />
           <DownRowWrapper>
             <StyledButton type="submit">Login</StyledButton>
+            <SmallerButton type="button" onClick={onGuestButtonClick}>
+              Guest
+            </SmallerButton>
           </DownRowWrapper>
         </form>
       </DownRowWrapper>
