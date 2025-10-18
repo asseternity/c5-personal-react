@@ -1,8 +1,25 @@
-# React + Vite
+# Viva Verso
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Summary
+Full-stack blog/newsletter platform with public and admin frontends, secure publishing, and versioned content workflow.
 
-Currently, two official plugins are available:
+## Tech
+- **Frontend:** React, Vite, Tailwind CSS  
+- **Backend:** Node.js, Express  
+- **Database:** PostgreSQL, Prisma ORM  
+- **Auth:** JWT with admin roles  
+- **Quality:** Vitest  
+- **DevOps:** Git, CI/CD
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Highlights
+- Dual UI for admin and readers  
+- Content workflow: drafts → review → publish  
+- Rich editor with media and slug routing  
+- Newsletter scheduling and export  
+
+## Architecture
+- REST API with DTO validation  
+- Indexed Postgres schema for posts and revisions  
+- Role-based access control  
+
+## Check it out here: https://asseternity.github.io/c5-personal-react/
